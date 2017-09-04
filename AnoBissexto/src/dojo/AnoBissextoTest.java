@@ -6,8 +6,9 @@ import org.junit.Test;
 public class AnoBissextoTest {
 
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void testAno2001() {
+		boolean ano = AnoBissexto.anoValido(2001); 
+		assertEquals(false, ano);
 	}
 
 }
