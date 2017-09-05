@@ -52,6 +52,24 @@ public class AnoBissextoTest {
 		boolean ano = AnoBissexto.anoValido(2011); 
 		assertEquals(false, ano);
 	}
+	
+	@Test
+	public void testAno1900() {
+		boolean ano = AnoBissexto.anoValido(1900); 
+		assertEquals(false, ano);
+	}
+	
+	@Test
+	public void testAno2100() {
+		boolean ano = AnoBissexto.anoValido(2100); 
+		assertEquals(false, ano);
+	}
+	
+	@Test
+	public void testAno1800() {
+		boolean ano = AnoBissexto.anoValido(1800); 
+		assertEquals(false, ano);
+	}
 
 
 }
