@@ -3,24 +3,16 @@ package dojo;
 public class AnoBissexto {
 
 	public static boolean anoValido(int ano) {
-		/*if(ano % 100 == 0 && ano % 4 == 0 && ano % 400 == 0){
-			return false;
-		}
-		else if (ano % 4 == 0 || ano % 400 == 0) {
-			return true;
-		}else if (ano % 100 != 0){
-			return false;
-		}
-		return false;
-	}*/
-		if (ano % 4 == 0 || ano % 400 == 0){
-			return true;
-		}else if (ano % 100 == 0){
-			return false;
-		}else if (ano % 100 == 0 && ano % 400 == 0){
-			return true;
-		}
-		return false;
-	
-}
+		/* eh bissexto quando eh divisivel por 4 e 400 e não divisivel por 100 */
+		boolean divisivelPor4, divisivelPor100, divisivelPor400, ehBissexto;
+		
+		divisivelPor4 = ano % 4 == 0;
+		divisivelPor100 = ano % 100 == 0;
+		divisivelPor400 = ano % 400 == 0;
+		
+		ehBissexto = (divisivelPor4 && !divisivelPor100) || divisivelPor400;
+		
+		return ehBissexto;
+		
 	}
+}
